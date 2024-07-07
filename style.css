@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.section {
+    padding: 100px 20px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#about {
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Styles for the h2 within the #about section */
+#about h2 {
+    font-size: 2.5em;
+    color: #333; /* Solid dark color */
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Styles for the p within the #about section */
+#about p {
+    font-size: 1.1em;
+    color: #666; /* Solid dark color */
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+#about p br {
+    display: block;
+    margin-top: 1em;
+}
+
+#search-weather {
+    min-height: 30vh;
+    margin-top: 20px;
+}
+
+h1, h2 {
+    margin: 0 0 20px 0;
+}
+
+.weather-sections {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Add some gap between containers */
+}
+
+
+.grant-location-container,
+.weatherContainer {
+    flex-basis: calc(33% - 20px); /* Adjust the basis to account for gap */
+    min-width: 300px;
+    margin: 0; /* Remove negative margin */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.grant-location-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grant-location-container img {
+    margin-bottom: 2rem;
+}
+
+.grant-location-container p:first-of-type {
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.grant-location-container p:last-of-type {
+    font-size: 0.85rem;
+    font-weight: 300;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+    text-align: center;
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cityHeader {
+    font-size: 2em;
+}
+
+.temperature {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.documentIconImg {
+    width: 100px;
+    height: 100px;
+}
+
+.weatherDescriptionHeader,
+.humidity,
+.windSpeed {
+    font-size: 1.2em;
+    color: #555;
+}
+
+#currentWeatherContainer {
+    display: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.forecast {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.forecast div {
+    flex: 1;
+    padding: 10px;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+}
+
+.date,
+.temp,
+.description {
+    margin: 5px 0;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#searchInput {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+#searchBtn {
+    padding: 10px;
+    font-size: 1em;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 1300px) {
+    .weather-sections {
+        justify-content: center;
+    }
+
+    .grant-location-container,
+    .weatherContainer {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grant-location-container,
+    .weatherContainer {
+        flex-basis: 100%;
+    }
+
+    #currentWeatherContainer,
+    #searchWeatherContainer {
+        order: 0; /* Reset order */
+    }
+
+    #searchWeatherContainer {
+        order: 1; /* Move search container below */
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .grant-location-container,
+    .weatherContainer {
+        min-width: 100%;
+        margin: 10px 0;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    #searchInput,
+    #searchBtn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .forecast {
+        flex-direction: column;
+    }
+
+    .forecast div {
+        margin-bottom: 20px;
+    }
+}

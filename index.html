@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast-Forge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="about" class="section">
+        <h2>Welcome To Forecast-Forge</h2>
+        <p>Forecast-Forge is your go-to platform whenever and wherever you want to find the weather conditions. Clicking on grant location enables you to know the weather conditions of your current location. <br> AND just enter the name of the place you want to know the weather condition of, click on the search button, and just within seconds the weather forecast will be on your screen. Along with this, the weather forecast of the next three days will also be displayed. This is what makes Forecast Forge different from other weather apps.</p>
+    </section>
+
+    <section id="search-weather" class="section">
+        <div class="weather-sections">
+            <div class="sub-container grant-location-container">
+                <img src="./images/logo.gif" width="80" height="80" loading="lazy" />
+                <p>Grant Location Access</p>
+                <p data-messageText>Allow Access To Get Weather Information</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+
+            <div id="currentWeatherContainer" class="weatherContainer">
+                <h2>Current Location Weather</h2>
+                <div class="weather">
+                    <h1 id="currentCityHeader" class="cityHeader">City</h1>
+                    <h2 id="currentTemperature" class="temperature">Temp °C</h2>
+                    <img id="currentDocumentIconImg" class="documentIconImg" src="default.jpg" alt="weather icon">
+                    <p id="currentWeatherDescriptionHeader" class="weatherDescriptionHeader">Weather Description</p>
+                    <p id="currentHumidity" class="humidity">Humidity: </p>
+                    <p id="currentWindSpeed" class="windSpeed">Wind Speed: </p>
+                </div>
+            </div>
+
+            <div id="searchWeatherContainer" class="weatherContainer">
+                <h2>Search Weather</h2>
+                <div class="search-container">
+                    <input id="searchInput" type="text" placeholder="Enter the name of place">
+                    <button id="searchBtn">Search</button>
+                </div>
+                <div class="weather">
+                    <h1 id="cityHeader" class="cityHeader">City</h1>
+                    <h2 id="temperature" class="temperature">Temp °C</h2>
+                    <img id="documentIconImg" class="documentIconImg" src="default.jpg" alt="weather icon">
+                    <p id="weatherDescriptionHeader" class="weatherDescriptionHeader">Weather Description</p>
+                    <p id="humidity" class="humidity">Humidity: </p>
+                    <p id="windSpeed" class="windSpeed">Wind Speed: </p>
+                </div>
+                <div class="forecast">
+                    <div class="day-1">
+                        <h3 id="date-1" class="date">Date 1</h3>
+                        <h4 id="temp-1" class="temp">Temp 1 °C</h4>
+                        <img id="icon-1" class="icon" src="default.jpg" alt="weather icon">
+                        <p id="description-1" class="description">Description 1</p>
+                    </div>
+                    <div class="day-2">
+                        <h3 id="date-2" class="date">Date 2</h3>
+                        <h4 id="temp-2" class="temp">Temp 2 °C</h4>
+                        <img id="icon-2" class="icon" src="default.jpg" alt="weather icon">
+                        <p id="description-2" class="description">Description 2</p>
+                    </div>
+                    <div class="day-3">
+                        <h3 id="date-3" class="date">Date 3</h3>
+                        <h4 id="temp-3" class="temp">Temp 3 °C</h4>
+                        <img id="icon-3" class="icon" src="default.jpg" alt="weather icon">
+                        <p id="description-3" class="description">Description 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
